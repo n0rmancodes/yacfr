@@ -1,0 +1,43 @@
+.content {
+	margin-left:319px;
+}
+
+.logoArea {
+	margin-top:10px;
+}
+
+input {
+	border:transparent;
+	border-radius:10px;
+	height:30px;
+	width:200px;
+	padding-left:15px;
+	padding-right:15px;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+button {
+	vertical-align: middle;
+	border:transparent;
+	border-radius:10px;
+	height:30px;
+	margin:2px;
+}
+
+.side {
+	height: 100%; 
+	width: 300px; 
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #ddd;
+	overflow-x: hidden;
+	padding:10px;
+	font-family: 'Source Sans Pro', sans-serif;
+	text-align:center;
+}
+
+h1 {
+	font-family: 'Source Sans Pro', sans-serif;
+}
