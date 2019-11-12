@@ -11,11 +11,90 @@
 		<div class="side">
 			<div class="logoArea">
 				<h1 style="margin:0px;">YACFR</h1>
-				<p style="margin:0px;">Yet Another Client For Reddit</p>
+				<p style="margin:0px;font-size:11px;">Yet Another Client For Reddit</p>
+			</div>
+			<p>A super simple Reddit client, meant for just casual browsing, no login or anything.</p>
+			<p id="menu">
+				<a href="#" id="fpButton" class="onLink" onclick="fp();">Front Page View</a> • 
+				<a href="#" id="svButton" onclick="sv();">Sub View</a>
+			</p>
+			<div style="display:none;">
+				<input id="subscribe" placeholder="Subscribe to a subreddit."><button id="sBtn" onclick="subTo()">Sub</button>
+				<p id="subTxt" style="display:none;"></p>
 			</div>
 		</div>
 		<div class="content">
-			
+			<div class="load">
+				<div class="pb"><div class="prog" id="cProg"></div></div>
+			</div>
+			<div class="settingsCont">
+				<select id="bType">
+					<option>top</option>
+					<option>best</option>
+					<option>hot</option>
+					<option>new</option>
+					<option>controversial</option>
+					<option>rising</option>
+				</select>
+				<button onclick="saveType();">Refresh</button>
+			</div>
+			<div id="frontPage">
+				<div id="postContainer" style="display:none;">
+					<div class="post" id="post1">
+						<div class="postContent">
+							<p id="sub1" class="sub"></p>
+							<h2 id="title1" class="title"></h2>
+							</div>
+							<a id="postli1"><img class="thumb" id="thumb1"></a>
+						</div>
+					<div class="post" id="post2">
+						<div class="postContent">
+							<p id="sub2" class="sub"></p>
+							<h2 id="title2" class="title"></h2>
+						</div>
+						<a id="postli2"><img class="thumb" id="thumb2"></a>
+					</div>
+					<div class="post" id="post3">
+						<div class="postContent">
+							<p id="sub3" class="sub"></p>
+							<h2 id="title3" class="title"></h2>
+						</div>
+						<a id="postli3"><img class="thumb" id="thumb3"></a>
+					</div>
+					<div class="post" id="post4">
+						<div class="postContent">
+							<p id="sub4" class="sub"></p>
+							<h2 id="title4" class="title"></h2>
+						</div>
+						<a id="postli4"><img class="thumb" id="thumb4"></a>
+					</div>
+					<div class="post" id="post5">
+						<div class="postContent">
+							<p id="sub5" class="sub"></p>
+							<h2 id="title5" class="title"></h2>
+						</div>
+						<a id="postli5"><img class="thumb" id="thumb5"></a>
+					</div>
+					<div class="post" id="post6">
+						<div class="postContent">
+							<p id="sub6" class="sub"></p>
+							<h2 id="title6" class="title"></h2>
+						</div>
+						<a id="postli6"><img class="thumb" id="thumb6"></a>
+					</div>
+					<div class="post" id="post7">
+						<div class="postContent">
+							<p id="sub7" class="sub"></p>
+							<h2 id="title7" class="title"></h2>
+						</div>
+						<a id="postli7"><img class="thumb" id="thumb7"></a>
+					</div>
+				</div>	
+			</div>
+			<div id="subView">
+				<p style="color:red; display:none;" id="nosuberr"><b>Error!</b> You have not subbed to any subreddits yet!</p>
+			</div>
 		</div>
+		<script src="js/index.js"></script>
 	</body>
 </html>

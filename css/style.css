@@ -1,5 +1,6 @@
 .content {
 	margin-left:319px;
+	text-align:center;
 }
 
 .logoArea {
@@ -22,6 +23,15 @@ button {
 	border-radius:10px;
 	height:30px;
 	margin:2px;
+	-webkit-transition: background-color .5s, color .5s;
+	transition: background-color .5s, color .5s;
+	background-color:#282828;
+	color:white;
+}
+
+button:hover {
+	background-color:white;
+	color:black;
 }
 
 .side {
@@ -40,4 +50,84 @@ button {
 
 h1 {
 	font-family: 'Source Sans Pro', sans-serif;
+}
+
+.pb {
+	width:100%;
+	height:10px;
+	background-color:black;
+}
+
+.prog {
+	width:0px;
+	height:10px;
+	background-color:gray;
+	-webkit-transition: width 1s;
+	transition: width 1s; 
+}
+
+.post {
+	background-color:#e3e3e3;
+	font-family:'Poppins', sans-serif;
+	text-align:left;
+	padding:5px;
+	height:100px;
+	margin-top:10px;
+	margin-bottom:5px;
+	-webkit-transition: height 1s, background-color 1s;
+	transition: height 1s, background-color 1s;
+}
+
+.post:hover {
+	background-color:#c6c6c6;
+}
+
+.postContent {
+	float:left;
+	width:75%;
+}
+
+.sub {
+	margin-bottom:.5px;
+}
+
+.title {
+	margin-top:.5px;
+}
+
+.thumb {
+	float:left;
+	width:25%;
+	height:95px;
+	object-fit: cover;
+	-webkit-transition: height 1s;
+	transition: height 1s; 
+	cursor:pointer;
+}
+
+a {
+	color:black;
+	-webkit-transition: color .5s;
+	transition: color .5s; 
+}
+
+a:hover {
+	color:#4d4d4d;
+}
+
+.onLink {
+	color:black;
+	text-decoration:none;
+}
+
+.onLink:hover {
+	color:black;
+}	
+
+.settingsCont {
+	background-color:#e3e3e3;
+	height: 35px;
+	width:100%;
+	text-align:right;
+	margin-bottom:5px;
 }
