@@ -16,11 +16,15 @@
 			<p>A super simple Reddit client, meant for just casual browsing, no login or anything.</p>
 			<p id="menu">
 				<a href="#" id="fpButton" class="onLink" onclick="fp();">Front Page View</a> • 
-				<a href="#" id="svButton" onclick="sv();">Sub View</a>
+				<a href="#" id="svButton" onclick="sv();">Sub View</a><br><br>
+				<a href="#" id="svButton" onclick="shortcuts();">Show Keyboard Shortcuts</a>
 			</p>
 			<div style="display:none;">
 				<input id="subscribe" placeholder="Subscribe to a subreddit."><button id="sBtn" onclick="subTo()">Sub</button>
 				<p id="subTxt" style="display:none;"></p>
+			</div>
+			<div id="cooldownErr" class="err" style="display:none;">
+				<p>Please wait for the cooldown...</p>
 			</div>
 		</div>
 		<div class="content">
@@ -28,15 +32,18 @@
 				<div class="pb"><div class="prog" id="cProg"></div></div>
 			</div>
 			<div class="settingsCont">
-				<select id="bType">
-					<option>top</option>
-					<option>best</option>
-					<option>hot</option>
-					<option>new</option>
-					<option>controversial</option>
-					<option>rising</option>
-				</select>
-				<button onclick="saveType();">Refresh</button>
+				<p id="pInfo">Please wait...</p>
+				<div id="sType">
+					<select id="bType">
+						<option>top</option>
+						<option>best</option>
+						<option>hot</option>
+						<option>new</option>
+						<option>controversial</option>
+						<option>rising</option>
+					</select>
+					<button onclick="saveType();">Refresh</button>
+				</div>
 			</div>
 			<div id="frontPage">
 				<div id="postContainer" style="display:none;">
@@ -44,6 +51,7 @@
 						<div class="postContent">
 							<p id="sub1" class="sub"></p>
 							<h2 id="title1" class="title"></h2>
+							<p class="footer"><a href="#" id="fullPost1">View Full Post</a> • <a id="he1" href="#">View Here (beta)</a></p>
 							</div>
 							<a id="postli1"><img class="thumb" id="thumb1"></a>
 						</div>
@@ -51,6 +59,7 @@
 						<div class="postContent">
 							<p id="sub2" class="sub"></p>
 							<h2 id="title2" class="title"></h2>
+							<p class="footer"><a href="#" id="fullPost2">View Full Post</a> • <a id="he2" href="#">View Here (beta)</a></p>
 						</div>
 						<a id="postli2"><img class="thumb" id="thumb2"></a>
 					</div>
@@ -58,6 +67,7 @@
 						<div class="postContent">
 							<p id="sub3" class="sub"></p>
 							<h2 id="title3" class="title"></h2>
+							<p class="footer"><a href="#" id="fullPost3">View Full Post</a> • <a id="he3" href="#">View Here (beta)</a></p>
 						</div>
 						<a id="postli3"><img class="thumb" id="thumb3"></a>
 					</div>
@@ -65,6 +75,7 @@
 						<div class="postContent">
 							<p id="sub4" class="sub"></p>
 							<h2 id="title4" class="title"></h2>
+							<p class="footer"><a href="#" id="fullPost4">View Full Post</a> • <a id="he4" href="#">View Here (beta)</a></p>
 						</div>
 						<a id="postli4"><img class="thumb" id="thumb4"></a>
 					</div>
@@ -72,6 +83,7 @@
 						<div class="postContent">
 							<p id="sub5" class="sub"></p>
 							<h2 id="title5" class="title"></h2>
+							<p class="footer"><a href="#" id="fullPost5">View Full Post</a> • <a id="he5" href="#">View Here (beta)</a></p>
 						</div>
 						<a id="postli5"><img class="thumb" id="thumb5"></a>
 					</div>
@@ -79,6 +91,7 @@
 						<div class="postContent">
 							<p id="sub6" class="sub"></p>
 							<h2 id="title6" class="title"></h2>
+							<p class="footer"><a href="#" id="fullPost6">View Full Post</a> • <a id="he6" href="#">View Here (beta)</a></p>
 						</div>
 						<a id="postli6"><img class="thumb" id="thumb6"></a>
 					</div>
@@ -86,6 +99,7 @@
 						<div class="postContent">
 							<p id="sub7" class="sub"></p>
 							<h2 id="title7" class="title"></h2>
+							<p class="footer"><a href="#" id="fullPost7">View Full Post</a> • <a id="he7" href="#">View Here (beta)</a></p>
 						</div>
 						<a id="postli7"><img class="thumb" id="thumb7"></a>
 					</div>
@@ -94,8 +108,18 @@
 			<div class="err" id="conErr" style="display:none;">
 				<p>It seems that there was an error connecting to Reddit. Check your connection and try again.</p>
 			</div>
-			<div id="subView">
-				
+			<div id="subView"></div>
+			<div class="overlay" id="shortMenu" style="display:none;">
+				<div class="menu overlayContent">
+					<h2>Keyboard Shortcuts</h2>
+					<p><b>Shift + T</b>: Top Posts<br>
+					<b>Shift + B</b>: Best Posts<br>
+					<b>Shift + H</b>: Hot Posts<br>
+					<b>Shift + N</b>: New Posts<br>
+					<b>Shift + C</b>: Controversial Posts<br>
+					<b>Shift + R</b>: Rising Posts<br></p>
+					<button onclick="document.getElementById('shortMenu').style.display = 'none';">Close</button>
+				</div>
 			</div>
 		</div>
 		<script src="js/index.js"></script>
