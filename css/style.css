@@ -131,3 +131,8 @@ a:hover {
 	text-align:right;
 	margin-bottom:5px;
 }
+
+.err {
+	color:red;
+	font-family:'Poppins', sans-serif;
+}

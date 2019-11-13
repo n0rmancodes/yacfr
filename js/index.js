@@ -30,7 +30,7 @@ function start() {
 		if (thumb1 === "self" | thumb1 === "default" | thumb1 === "nsfw") {
 			document.getElementById("thumb1").src = "img/1.png"
 		} else {
-			document.getElementById("thumb1").src = thumb1;
+			document.getElementById("thumb1").src = "https://yacfr-img-proxy.herokuapp.com/?url=" + thumb1;
 		}
 		document.getElementById("postli1").href = url1;
 		var sub2 = wd.data.children[1].data.subreddit_name_prefixed;
@@ -49,7 +49,7 @@ function start() {
 		if (thumb2 === "self" | thumb2 === "default" | thumb3 === "nsfw") {
 			document.getElementById("thumb2").src = "img/1.png"
 		} else {
-			document.getElementById("thumb2").src = thumb2;
+			document.getElementById("thumb2").src = "https://yacfr-img-proxy.herokuapp.com/?url=" + thumb2;
 		}
 		document.getElementById("postli2").href = url2;
 		var sub3 = wd.data.children[2].data.subreddit_name_prefixed;
@@ -68,7 +68,7 @@ function start() {
 		if (thumb3 === "self" | thumb3 === "default" | thumb3 === "nsfw") {
 			document.getElementById("thumb3").src = "img/1.png"
 		} else {
-			document.getElementById("thumb3").src = thumb3;
+			document.getElementById("thumb3").src = "https://yacfr-img-proxy.herokuapp.com/?url=" + thumb3;
 		}
 		document.getElementById("postli3").href = url3;
 		var sub4 = wd.data.children[3].data.subreddit_name_prefixed;
@@ -87,7 +87,7 @@ function start() {
 		if (thumb4 === "self" | thumb4 === "default" | thumb4 === "nsfw") {
 			document.getElementById("thumb4").src = "img/1.png"
 		} else {
-			document.getElementById("thumb4").src = thumb4;
+			document.getElementById("thumb4").src = "https://yacfr-img-proxy.herokuapp.com/?url=" + thumb4;
 		}
 		document.getElementById("postli4").href = url4;
 		var sub5 = wd.data.children[4].data.subreddit_name_prefixed;
@@ -106,7 +106,7 @@ function start() {
 		if (thumb5 === "self" | thumb5 === "default" | thumb5 === "nsfw") {
 			document.getElementById("thumb5").src = "img/1.png"
 		} else {
-			document.getElementById("thumb5").src = thumb5;
+			document.getElementById("thumb5").src = "https://yacfr-img-proxy.herokuapp.com/?url=" + thumb5;
 		}
 		document.getElementById("postli5").href = url5;
 		var sub6 = wd.data.children[5].data.subreddit_name_prefixed;
@@ -125,7 +125,7 @@ function start() {
 		if (thumb6 === "self" | thumb6 === "default" | thumb6 === "nsfw") {
 			document.getElementById("thumb6").src = "img/1.png"
 		} else {
-			document.getElementById("thumb6").src = thumb6;
+			document.getElementById("thumb6").src = "https://yacfr-img-proxy.herokuapp.com/?url=" + thumb6;
 		}
 		document.getElementById("postli6").href = url6;
 		document.getElementById("cProg").style = "width:100%";
@@ -146,11 +146,15 @@ function start() {
 		if (thumb7 === "self" | thumb7 === "default" | thumb7 === "nsfw") {
 			document.getElementById("thumb7").src = "img/1.png"
 		} else {
-			document.getElementById("thumb7").src = thumb7;
+			document.getElementById("thumb7").src = "https://yacfr-img-proxy.herokuapp.com/?url=" + thumb7;
 		}
 		document.getElementById("postli7").href = url7;
 		document.getElementById("cProg").style = "width:100%";
 		document.getElementById("postContainer").style.display = '';
+	}
+	http.onerror = function() {
+		document.getElementById("cProg").style = "width:100%";
+		document.getElementById("conErr").style.display = "";
 	}
 }
 
