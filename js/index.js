@@ -40,7 +40,7 @@ function start() {
 		document.getElementById("cProg").style = "width:1%";
 		document.getElementById("pInfo").innerHTML = "Setting up request..."
 		const http = new XMLHttpRequest();
-		const dUrl = "https://cors-anywhere.herokuapp.com/https://www.reddit.com/" + localStorage.getItem('bType') + ".json?"
+		const dUrl = "https://cors-anywhere.herokuapp.com/https://www.reddit.com/" + localStorage.getItem('bType') + ".json?limit=100"
 		http.open("GET", dUrl);
 		document.getElementById("cProg").style = "width:5%";
 		document.getElementById("pInfo").innerHTML = "Opening request..."
@@ -69,7 +69,7 @@ function start() {
 			}
 			document.getElementById("sub1").innerHTML = sub1;
 			document.getElementById("title1").innerHTML = title1;
-			if (thumb1 === "self" | thumb1 === "default" | thumb1 === "nsfw") {
+			if (thumb1 === "self" | thumb1 === "default" | thumb1 === "nsfw" | thumb1 === "image") {
 				document.getElementById("thumb1").src = "img/1.png"
 			} else {
 				document.getElementById("thumb1").src = "https://yacfr-img-proxy.herokuapp.com/?url=" + thumb1;
@@ -91,7 +91,7 @@ function start() {
 			}
 			document.getElementById("sub2").innerHTML = sub2;
 			document.getElementById("title2").innerHTML = title2;
-			if (thumb2 === "self" | thumb2 === "default" | thumb3 === "nsfw") {
+			if (thumb2 === "self" | thumb2 === "default" | thumb2 === "nsfw" | thumb2 === "image") {
 				document.getElementById("thumb2").src = "img/1.png"
 			} else {
 				document.getElementById("thumb2").src = "https://yacfr-img-proxy.herokuapp.com/?url=" + thumb2;
@@ -113,7 +113,7 @@ function start() {
 			}
 			document.getElementById("sub3").innerHTML = sub3;
 			document.getElementById("title3").innerHTML = title3;
-			if (thumb3 === "self" | thumb3 === "default" | thumb3 === "nsfw") {
+			if (thumb3 === "self" | thumb3 === "default" | thumb3 === "nsfw" | thumb3 === "image") {
 				document.getElementById("thumb3").src = "img/1.png"
 			} else {
 				document.getElementById("thumb3").src = "https://yacfr-img-proxy.herokuapp.com/?url=" + thumb3;
@@ -135,7 +135,7 @@ function start() {
 			}
 			document.getElementById("sub4").innerHTML = sub4;
 			document.getElementById("title4").innerHTML = title4;
-			if (thumb4 === "self" | thumb4 === "default" | thumb4 === "nsfw") {
+			if (thumb4 === "self" | thumb4 === "default" | thumb4 === "nsfw" | thumb4 === "image") {
 				document.getElementById("thumb4").src = "img/1.png"
 			} else {
 				document.getElementById("thumb4").src = "https://yacfr-img-proxy.herokuapp.com/?url=" + thumb4;
@@ -157,7 +157,7 @@ function start() {
 			}
 			document.getElementById("sub5").innerHTML = sub5;
 			document.getElementById("title5").innerHTML = title5;
-			if (thumb5 === "self" | thumb5 === "default" | thumb5 === "nsfw") {
+			if (thumb5 === "self" | thumb5 === "default" | thumb5 === "nsfw" | thumb5 === "image") {
 				document.getElementById("thumb5").src = "img/1.png"
 			} else {
 				document.getElementById("thumb5").src = "https://yacfr-img-proxy.herokuapp.com/?url=" + thumb5;
@@ -174,7 +174,7 @@ function start() {
 			}
 			var thumb6 = wd.data.children[5].data.thumbnail;
 			var url6 = wd.data.children[5].data.url;
-			if (url6.includes("https://i.redd.it/") | url6.includes("https://i.imgur.com/")) {
+			if (url6.includes("https://i.redd.it/") | url6.includes("https://i.imgur.com/") | thumb6 === "image") {
 				var url6 = "https://yacfr-img-proxy.herokuapp.com/?url=" + url6;
 			}
 			document.getElementById("sub6").innerHTML = sub6;
@@ -203,7 +203,7 @@ function start() {
 			}
 			document.getElementById("sub7").innerHTML = sub7;
 			document.getElementById("title7").innerHTML = title7;
-			if (thumb7 === "self" | thumb7 === "default" | thumb7 === "nsfw") {
+			if (thumb7 === "self" | thumb7 === "default" | thumb7 === "nsfw" | thumb7 === "image") {
 				document.getElementById("thumb7").src = "img/1.png"
 			} else {
 				document.getElementById("thumb7").src = "https://yacfr-img-proxy.herokuapp.com/?url=" + thumb7;
@@ -213,14 +213,15 @@ function start() {
 			document.getElementById("postContainer").style.display = '';
 			document.getElementById("cProg").style = "width:100%";
 			document.getElementById("pInfo").innerHTML = "Completed the task."
-			
+			cooldown();
 		}
 		http.onerror = function() {
 			document.getElementById("cProg").style = "width:100%";
 			document.getElementById("conErr").style.display = "";
 			document.getElementById("pInfo").innerHTML = "Error! Plase see below for more details."
+			cooldown();
 		}
-		cooldown();
+		
 	}
 }
 
