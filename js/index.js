@@ -64,7 +64,7 @@ function start() {
 			}
 			var thumb1 = wd.data.children[0].data.thumbnail;
 			var url1 = wd.data.children[0].data.url;
-			if (url1.includes("https://i.redd.it/")) {
+			if (url1.includes("https://i.redd.it/") | url1.includes("https://i.imgur.com/")) {
 				var url1 = "https://yacfr-img-proxy.herokuapp.com/?url=" + url1;
 			}
 			document.getElementById("sub1").innerHTML = sub1;
@@ -87,7 +87,7 @@ function start() {
 			}
 			var thumb2 = wd.data.children[1].data.thumbnail;
 			var url2 = wd.data.children[1].data.url;
-			if (url2.includes("https://i.redd.it/")) {
+			if (url2.includes("https://i.redd.it/") | url2.includes("https://i.imgur.com/")) {
 				var url2 = "https://yacfr-img-proxy.herokuapp.com/?url=" + url2;
 			}
 			document.getElementById("sub2").innerHTML = sub2;
@@ -109,7 +109,7 @@ function start() {
 			}
 			var thumb3 = wd.data.children[2].data.thumbnail;
 			var url3 = wd.data.children[2].data.url;
-			if (url3.includes("https://i.redd.it/")) {
+			if (url3.includes("https://i.redd.it/") | url3.includes("https://i.imgur.com/")) {
 				var url3 = "https://yacfr-img-proxy.herokuapp.com/?url=" + url3;
 			}
 			document.getElementById("sub3").innerHTML = sub3;
@@ -131,7 +131,7 @@ function start() {
 			}
 			var thumb4 = wd.data.children[3].data.thumbnail;
 			var url4 = wd.data.children[3].data.url;
-			if (url4.includes("https://i.redd.it/")) {
+			if (url4.includes("https://i.redd.it/") | url4.includes("https://i.imgur.com/")) {
 				var url4 = "https://yacfr-img-proxy.herokuapp.com/?url=" + url4;
 			}
 			document.getElementById("sub4").innerHTML = sub4;
@@ -153,7 +153,7 @@ function start() {
 			}
 			var thumb5 = wd.data.children[4].data.thumbnail;
 			var url5 = wd.data.children[4].data.url;
-			if (url5.includes("https://i.redd.it/")) {
+			if (url5.includes("https://i.redd.it/") | url5.includes("https://i.imgur.com/")) {
 				var url5 = "https://yacfr-img-proxy.herokuapp.com/?url=" + url5;
 			}
 			document.getElementById("sub5").innerHTML = sub5;
@@ -175,7 +175,7 @@ function start() {
 			}
 			var thumb6 = wd.data.children[5].data.thumbnail;
 			var url6 = wd.data.children[5].data.url;
-			if (url6.includes("https://i.redd.it/")) {
+			if (url6.includes("https://i.redd.it/") | url6.includes("https://i.imgur.com/")) {
 				var url6 = "https://yacfr-img-proxy.herokuapp.com/?url=" + url6;
 			}
 			document.getElementById("sub6").innerHTML = sub6;
@@ -199,7 +199,7 @@ function start() {
 			}
 			var thumb7 = wd.data.children[6].data.thumbnail;
 			var url7 = wd.data.children[6].data.url;
-			if (url7.includes("https://i.redd.it/")) {
+			if (url7.includes("https://i.redd.it/") | url7.includes("https://i.imgur.com/")) {
 				var url7 = "https://yacfr-img-proxy.herokuapp.com/?url=" + url7;
 			}
 			document.getElementById("sub7").innerHTML = sub7;
