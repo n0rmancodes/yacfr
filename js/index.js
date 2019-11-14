@@ -73,7 +73,6 @@ function start() {
 				document.getElementById("thumb1").src = "img/1.png"
 			} else {
 				document.getElementById("thumb1").src = "https://yacfr-img-proxy.herokuapp.com/?url=" + thumb1;
-				document.getElementById("thumb1").src = "https://yacfr-img-proxy.herokuapp.com/?url=" + thumb1;
 			}
 			document.getElementById("postli1").href = url1;
 			var sub2 = wd.data.children[1].data.subreddit_name_prefixed;
