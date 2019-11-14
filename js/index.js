@@ -40,7 +40,7 @@ function start() {
 		document.getElementById("cProg").style = "width:1%";
 		document.getElementById("pInfo").innerHTML = "Setting up request..."
 		const http = new XMLHttpRequest();
-		const dUrl = "https://cors-anywhere.herokuapp.com/https://www.reddit.com/" + localStorage.getItem('bType') + ".json?limit-100"
+		const dUrl = "https://cors-anywhere.herokuapp.com/https://www.reddit.com/" + localStorage.getItem('bType') + ".json?"
 		http.open("GET", dUrl);
 		document.getElementById("cProg").style = "width:5%";
 		document.getElementById("pInfo").innerHTML = "Opening request..."
