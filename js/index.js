@@ -300,9 +300,9 @@ function sv() {
 
 function fp() {
 	//if (document.getElementById('frontPage').style.display) {
-	///	document.getElementById("cProg").style = "width:0%";
+	//	document.getElementById("cProg").style = "width:0%";
 	//	document.getElementById('fpButton').classList.add("onLink");
-	///	document.getElementById('svButton').classList.remove("onLink");
+	//  document.getElementById('svButton').classList.remove("onLink");
 	//	document.getElementById('frontPage').style.display = '';
 	//	document.getElementById('subView').style.display = 'none';
 	//	start();
