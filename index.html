@@ -15,8 +15,6 @@
 			</div>
 			<p>A super simple Reddit client, meant for just casual browsing, no login or anything.</p>
 			<p id="menu">
-				<a href="#" id="fpButton" class="onLink" onclick="fp();">Front Page View</a> • 
-				<a href="#" id="svButton" onclick="sv();">Sub View</a><br><br>
 				<a href="#" id="shButton" onclick="shortcuts();">Show Keyboard Shortcuts</a><br>
 				<a href="#" id="seButton" onclick="settings();" style="display:none;">Settings</a>
 			</p>
@@ -106,7 +104,6 @@
 			<div class="err" id="conErr" style="display:none;">
 				<p>It seems that there was an error connecting to Reddit. Check your connection and try again.<br> Trying again in a few seconds.</p>
 			</div>
-			<div id="subView"></div>
 			<div class="overlay" id="shortMenu" style="display:none;">
 				<div class="menu overlayContent">
 					<h2>Keyboard Shortcuts</h2>
@@ -121,12 +118,7 @@
 			</div>
 			<div id="viewer" class="overlay" style="display:none;" onclick="document.getElementById('viewer').style.display='none';">
 				<div id="imageViewer" class="view overlayContent">
-					
-				</div>
-				<div id="videoViewer" class="view overlayContent" style="display:none;">
-					<video controls loop id="player">
-						
-					</video>
+					<iframe id="ytPlayer" style='display:none;' frameborder="0" allowfullscreen></iframe>
 				</div>
 			</div>
 		</div>
