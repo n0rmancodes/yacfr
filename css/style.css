@@ -63,7 +63,7 @@ h1 {
 	height:10px;
 	background-color:#404040;
 	-webkit-transition: width 1s;
-	transition: width 1s; 
+	transition: width 1s, background-color 1s; 
 }
 
 .post {
@@ -192,4 +192,41 @@ a:hover {
 
 #shortMenu {
 	text-align:center;
+}
+
+.view {
+	max-width:1000px;
+	min-width:900px;
+	max-height:850px;
+	min-height:700px;
+	width:auto;
+	height:auto;
+	border:transparent;
+	border-radius:10px;
+	background-color:#e3e3e3;
+	font-family:'Poppins', sans-serif;
+	text-align:left;
+}
+
+.spacer {
+	width:10px;
+	height:5px;
+}
+
+.imgViewer {
+	object-fit:contain;
+	width:1000px;
+	height:845px;
+}
+
+.videoViewer {
+	object-fit:contain;
+	width:1000px;
+	height:845px;
+}
+
+#player {
+	object-fit:contain;
+	width:1000px;
+	height:845px;
 }
