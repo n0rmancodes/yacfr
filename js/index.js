@@ -63,7 +63,7 @@ function start() {
 			var url1 = "https://yacfr-img-proxy.herokuapp.com/?url=" + url1.replace(".gifv", ".mp4");
 		}
 		if (url1.includes("https://v.redd.it/")) {
-			var url1 = "https://yacfr-img-proxy.herokuapp.com/?url=" + url1 + "/DASH_480";
+			var url1 = "https://yacfr-img-proxy.herokuapp.com/?url=" + wd.data.children[0].data.secure_media.reddit_video.fallback_url;
 		}
 		var pUrl1 = "https://reddit.com" + wd.data.children[0].data.permalink;
 		document.getElementById("fullPost1").href = pUrl1;
@@ -90,7 +90,7 @@ function start() {
 			var url2 = "https://yacfr-img-proxy.herokuapp.com/?url=" + url2.replace(".gifv", ".mp4");
 		}
 		if (url2.includes("https://v.redd.it/")) {
-			var url2 = "https://yacfr-img-proxy.herokuapp.com/?url=" + url2 + "/DASH_480";
+			var url2 = "https://yacfr-img-proxy.herokuapp.com/?url=" + wd.data.children[1].data.secure_media.reddit_video.fallback_url;
 		}
 		var pUrl2 = "https://reddit.com" + wd.data.children[1].data.permalink;
 		document.getElementById("fullPost2").href = pUrl2;
@@ -117,7 +117,7 @@ function start() {
 			var url3 = "https://yacfr-img-proxy.herokuapp.com/?url=" + url3.replace(".gifv", ".mp4");
 		}
 		if (url3.includes("https://v.redd.it/")) {
-			var url3 = "https://yacfr-img-proxy.herokuapp.com/?url=" + url3 + "/DASH_480";
+			var url3 = "https://yacfr-img-proxy.herokuapp.com/?url=" + wd.data.children[2].data.secure_media.reddit_video.fallback_url;
 		}
 		var pUrl3 = "https://reddit.com" + wd.data.children[2].data.permalink;
 		document.getElementById("fullPost3").href = pUrl1;
@@ -142,6 +142,9 @@ function start() {
 		var url4 = wd.data.children[3].data.url;
 		if (url4.includes("https://i.redd.it/") | url4.includes("https://i.imgur.com/") | url4.includes("https://pbs.twimg.com") | url4.includes("media.tumblr.com")) {
 			var url4 = "https://yacfr-img-proxy.herokuapp.com/?url=" + url4.replace(".gifv", ".mp4");
+		}
+		if (url4.includes("https://v.redd.it/")) {
+			var url4 = "https://yacfr-img-proxy.herokuapp.com/?url=" + wd.data.children[3].data.secure_media.reddit_video.fallback_url;
 		}
 		var pUrl4 = "https://reddit.com" + wd.data.children[3].data.permalink;
 		document.getElementById("fullPost4").href = pUrl4;
@@ -168,7 +171,7 @@ function start() {
 			var url5 = "https://yacfr-img-proxy.herokuapp.com/?url=" + url5.replace(".gifv", ".mp4");
 		}
 		if (url5.includes("https://v.redd.it/")) {
-			var url5 = "https://yacfr-img-proxy.herokuapp.com/?url=" + url5 + "/DASH_480";
+			var url5 = "https://yacfr-img-proxy.herokuapp.com/?url=" + wd.data.children[4].data.secure_media.reddit_video.fallback_url;
 		}
 		var pUrl5 = "https://reddit.com" + wd.data.children[4].data.permalink;
 		document.getElementById("fullPost5").href = pUrl5;
@@ -195,7 +198,7 @@ function start() {
 			var url6 = "https://yacfr-img-proxy.herokuapp.com/?url=" + url6.replace(".gifv", ".mp4");
 		}
 		if (url6.includes("https://v.redd.it/")) {
-			var url6 = "https://yacfr-img-proxy.herokuapp.com/?url=" + url6 + "/DASH_480";
+			var url6 = "https://yacfr-img-proxy.herokuapp.com/?url=" + wd.data.children[5].data.secure_media.reddit_video.fallback_url;;
 		}
 		var pUrl6 = "https://reddit.com" + wd.data.children[5].data.permalink;
 		document.getElementById("fullPost6").href = pUrl6;
@@ -223,7 +226,7 @@ function start() {
 			var url7 = "https://yacfr-img-proxy.herokuapp.com/?url=" + url7.replace(".gifv", ".mp4");
 		}
 		if (url7.includes("https://v.redd.it/")) {
-			var url7 = "https://yacfr-img-proxy.herokuapp.com/?url=" + url7 + "/DASH_480";
+			var url7 = "https://yacfr-img-proxy.herokuapp.com/?url=" + wd.data.children[6].data.secure_media.reddit_video.fallback_url;;
 		}
 		var pUrl7 = "https://reddit.com" + wd.data.children[6].data.permalink;
 		document.getElementById("fullPost7").href = pUrl7;
@@ -271,7 +274,9 @@ function shortcuts() {
 
 function openPost() {
 	document.getElementById("viewer").style.display = '';
+	document.getElementById("imageViewer").style.display = '';
 	document.getElementById("ytPlayer").style.display = 'none';
+	document.getElementById("player").style.display = 'none';
 	setTimeout(function () {
 		if (window.location.href.includes("v1")) {
 			if (document.getElementById("postli1").href.includes("https://i.redd.it") | document.getElementById("postli1").href.includes("https://i.imgur.com")) {
@@ -286,6 +291,11 @@ function openPost() {
 					document.getElementById("ytPlayer").src = "https://youtube.com/embed/" + id;
 					document.getElementById("ytPlayer").style.display = '';
 				}
+			} else if (document.getElementById("postli1").href.includes("https://v.redd.it")) {
+				document.getElementById("imageViewer").style.display = 'none';
+				document.getElementById("ytPlayer").style.display = 'none';
+				document.getElementById("player").style.display = '';
+				document.getElementById("player").src = document.getElementById("postli1").href;
 			} else {
 				document.getElementById("imageViewer").innerHTML = 'This media could not be opened.'
 			}
@@ -303,6 +313,11 @@ function openPost() {
 					document.getElementById("ytPlayer").src = "https://youtube.com/embed/" + id;
 					document.getElementById("ytPlayer").style.display = '';
 				}
+			} else if (document.getElementById("postli2").href.includes("https://v.redd.it")) {
+				document.getElementById("imageViewer").style.display = 'none';
+				document.getElementById("ytPlayer").style.display = 'none';
+				document.getElementById("player").style.display = '';
+				document.getElementById("player").src = document.getElementById("postli2").href;
 			} else {
 				document.getElementById("imageViewer").innerHTML = 'This media could not be opened.'
 			}
@@ -320,6 +335,11 @@ function openPost() {
 					document.getElementById("ytPlayer").src = "https://youtube.com/embed/" + id;
 					document.getElementById("ytPlayer").style.display = '';
 				}
+			} else if (document.getElementById("postli3").href.includes("https://v.redd.it")) {
+				document.getElementById("imageViewer").style.display = 'none';
+				document.getElementById("ytPlayer").style.display = 'none';
+				document.getElementById("player").style.display = '';
+				document.getElementById("player").src = document.getElementById("postli3").href;
 			} else {
 				document.getElementById("imageViewer").innerHTML = 'This media could not be opened.'
 			}
@@ -337,6 +357,11 @@ function openPost() {
 					document.getElementById("ytPlayer").src = "https://youtube.com/embed/" + id;
 					document.getElementById("ytPlayer").style.display = '';
 				}
+			} else if (document.getElementById("postli4").href.includes("https://v.redd.it")) {
+				document.getElementById("imageViewer").style.display = 'none';
+				document.getElementById("ytPlayer").style.display = 'none';
+				document.getElementById("player").style.display = '';
+				document.getElementById("player").src = document.getElementById("postli4").href;
 			} else {
 				document.getElementById("imageViewer").innerHTML = 'This media could not be opened.'
 			} 
@@ -353,6 +378,11 @@ function openPost() {
 					document.getElementById("ytPlayer").src = "https://youtube.com/embed/" + id;
 					document.getElementById("ytPlayer").style.display = '';
 				}
+			} else if (document.getElementById("postli5").href.includes("https://v.redd.it")) {
+				document.getElementById("imageViewer").style.display = 'none';
+				document.getElementById("ytPlayer").style.display = 'none';
+				document.getElementById("player").style.display = '';
+				document.getElementById("player").src = document.getElementById("postli5").href;
 			} else {
 				document.getElementById("imageViewer").innerHTML = 'This media could not be opened.'
 			}
@@ -369,6 +399,11 @@ function openPost() {
 					document.getElementById("ytPlayer").src = "https://youtube.com/embed/" + id;
 					document.getElementById("ytPlayer").style.display = '';
 				}
+			} else if (document.getElementById("postli6").href.includes("https://v.redd.it")) {
+				document.getElementById("imageViewer").style.display = 'none';
+				document.getElementById("ytPlayer").style.display = 'none';
+				document.getElementById("player").style.display = '';
+				document.getElementById("player").src = document.getElementById("postli6").href;
 			} else {
 				document.getElementById("imageViewer").innerHTML = 'This media could not be opened.'
 			}
@@ -385,6 +420,11 @@ function openPost() {
 					document.getElementById("ytPlayer").src = "https://youtube.com/embed/" + id;
 					document.getElementById("ytPlayer").style.display = '';
 				}
+			} else if (document.getElementById("postli7").href.includes("https://v.redd.it")) {
+				document.getElementById("imageViewer").style.display = 'none';
+				document.getElementById("ytPlayer").style.display = 'none';
+				document.getElementById("player").style.display = '';
+				document.getElementById("player").src = document.getElementById("postli7").href;
 			} else {
 				document.getElementById("imageViewer").innerHTML = 'This media could not be opened.'
 			}

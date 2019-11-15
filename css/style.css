@@ -229,7 +229,7 @@ a:hover {
 }
 
 #player {
-	object-fit:contain;
-	width:1000px;
-	height:845px;
+	width:900px;
+	height:695px;
+	border-radius:10px;
 }
