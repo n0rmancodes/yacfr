@@ -91,16 +91,6 @@ h1 {
 	margin-bottom:.5px;
 }
 
-.chartContainer {
-	width:80%;
-	float:left;
-}
-
-.rec {
-	width:19%;
-	float:left;
-}
-
 .title {
 	margin-top:.5px;
 	margin-bottom:.5px;
@@ -239,13 +229,6 @@ a:hover {
 }
 
 #player {
-	width:900px;
-	height:695px;
-	border-radius:10px;
-}
-
-#gyPlayer {
-	object-fit:contain;
 	width:900px;
 	height:695px;
 	border-radius:10px;
