@@ -71,11 +71,9 @@ h1 {
 	font-family:'Poppins', sans-serif;
 	text-align:left;
 	padding:5px;
-	height:auto;
+	min-height:125px;
 	margin-top:10px;
 	margin-bottom:5px;
-	-webkit-transition: height 1s, background-color 1s;
-	transition: height 1s, background-color 1s;
 }
 
 .post:hover {
@@ -109,7 +107,7 @@ h1 {
 .thumb {
 	float:left;
 	width:25%;
-	height:95px;
+	height:125px;
 	object-fit: cover;
 	-webkit-transition: height 1s;
 	transition: height 1s; 
@@ -167,6 +165,10 @@ a:hover {
 	text-align:right;
 	width:54%;
 	float:left;
+}
+
+#bType {
+	margin:7px;
 }
 
 .overlay {
