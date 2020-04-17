@@ -60,10 +60,10 @@ function start() {
 		var url1 = wd.data.children[0].data.url;
 		var pUrl1 = "https://reddit.com" + wd.data.children[0].data.permalink;
 		if (url1.includes("https://i.redd.it/") | url1.includes("https://i.imgur.com/") | url1.includes("https://pbs.twimg.com") | url1.includes("media.tumblr.com")) {
-			var url1 = "https://yacfr-img-proxy.herokuapp.com/?url=" + url1.replace(".gifv", ".gif");
+			var url1 =url1.replace(".gifv", ".gif");
 		}
 		if (url1.includes("https://v.redd.it/")) {
-			var url1 = "https://yacfr-img-proxy.herokuapp.com/?url=" + wd.data.children[0].data.secure_media.reddit_video.fallback_url;
+			var url1 =wd.data.children[0].data.secure_media.reddit_video.fallback_url;
 		}
 		var pUrl1 = "https://reddit.com" + wd.data.children[0].data.permalink;
 		document.getElementById("fullPost1").href = pUrl1;
@@ -72,7 +72,7 @@ function start() {
 		if (thumb1 === "self" | thumb1 === "default" | thumb1 === "nsfw" | thumb1 === "image") {
 			document.getElementById("thumb1").src = "img/1.png"
 		} else {
-			document.getElementById("thumb1").src = "https://yacfr-img-proxy.herokuapp.com/?url=" + thumb1;
+			document.getElementById("thumb1").src =thumb1;
 		}
 		document.getElementById("postli1").href = url1;
 		var sub2 = wd.data.children[1].data.subreddit_name_prefixed;
@@ -87,10 +87,10 @@ function start() {
 		var thumb2 = wd.data.children[1].data.thumbnail;
 		var url2 = wd.data.children[1].data.url;
 		if (url2.includes("https://i.redd.it/") | url2.includes("https://i.imgur.com/") | url2.includes("https://pbs.twimg.com") | url2.includes("media.tumblr.com")) {
-			var url2 = "https://yacfr-img-proxy.herokuapp.com/?url=" + url2.replace(".gifv", ".gif");
+			var url2 =url2.replace(".gifv", ".gif");
 		}
 		if (url2.includes("https://v.redd.it/")) {
-			var url2 = "https://yacfr-img-proxy.herokuapp.com/?url=" + wd.data.children[1].data.secure_media.reddit_video.fallback_url;
+			var url2 =wd.data.children[1].data.secure_media.reddit_video.fallback_url;
 		}
 		var pUrl2 = "https://reddit.com" + wd.data.children[1].data.permalink;
 		document.getElementById("fullPost2").href = pUrl2;
@@ -99,7 +99,7 @@ function start() {
 		if (thumb2 === "self" | thumb2 === "default" | thumb2 === "nsfw" | thumb2 === "image") {
 			document.getElementById("thumb2").src = "img/1.png"
 		} else {
-			document.getElementById("thumb2").src = "https://yacfr-img-proxy.herokuapp.com/?url=" + thumb2;
+			document.getElementById("thumb2").src =thumb2;
 		}
 		document.getElementById("postli2").href = url2;
 		var sub3 = wd.data.children[2].data.subreddit_name_prefixed;
@@ -114,10 +114,10 @@ function start() {
 		var thumb3 = wd.data.children[2].data.thumbnail;
 		var url3 = wd.data.children[2].data.url;
 		if (url3.includes("https://i.redd.it/") | url3.includes("https://i.imgur.com/") | url3.includes("https://pbs.twimg.com") | url3.includes("media.tumblr.com")) {
-			var url3 = "https://yacfr-img-proxy.herokuapp.com/?url=" + url3.replace(".gifv", ".gif");
+			var url3 =url3.replace(".gifv", ".gif");
 		}
 		if (url3.includes("https://v.redd.it/")) {
-			var url3 = "https://yacfr-img-proxy.herokuapp.com/?url=" + wd.data.children[2].data.secure_media.reddit_video.fallback_url;
+			var url3 =wd.data.children[2].data.secure_media.reddit_video.fallback_url;
 		}
 		var pUrl3 = "https://reddit.com" + wd.data.children[2].data.permalink;
 		document.getElementById("fullPost3").href = pUrl1;
@@ -126,7 +126,7 @@ function start() {
 		if (thumb3 === "self" | thumb3 === "default" | thumb3 === "nsfw" | thumb3 === "image") {
 			document.getElementById("thumb3").src = "img/1.png"
 		} else {
-			document.getElementById("thumb3").src = "https://yacfr-img-proxy.herokuapp.com/?url=" + thumb3;
+			document.getElementById("thumb3").src =thumb3;
 		}
 		document.getElementById("postli3").href = url3;
 		var sub4 = wd.data.children[3].data.subreddit_name_prefixed;
@@ -141,10 +141,10 @@ function start() {
 		var thumb4 = wd.data.children[3].data.thumbnail;
 		var url4 = wd.data.children[3].data.url;
 		if (url4.includes("https://i.redd.it/") | url4.includes("https://i.imgur.com/") | url4.includes("https://pbs.twimg.com") | url4.includes("media.tumblr.com")) {
-			var url4 = "https://yacfr-img-proxy.herokuapp.com/?url=" + url4.replace(".gifv", ".gif");
+			var url4 =url4.replace(".gifv", ".gif");
 		}
 		if (url4.includes("https://v.redd.it/")) {
-			var url4 = "https://yacfr-img-proxy.herokuapp.com/?url=" + wd.data.children[3].data.secure_media.reddit_video.fallback_url;
+			var url4 =wd.data.children[3].data.secure_media.reddit_video.fallback_url;
 		}
 		var pUrl4 = "https://reddit.com" + wd.data.children[3].data.permalink;
 		document.getElementById("fullPost4").href = pUrl4;
@@ -153,7 +153,7 @@ function start() {
 		if (thumb4 === "self" | thumb4 === "default" | thumb4 === "nsfw" | thumb4 === "image") {
 			document.getElementById("thumb4").src = "img/1.png"
 		} else {
-			document.getElementById("thumb4").src = "https://yacfr-img-proxy.herokuapp.com/?url=" + thumb4;
+			document.getElementById("thumb4").src =thumb4;
 		}
 		document.getElementById("postli4").href = url4;
 		var sub5 = wd.data.children[4].data.subreddit_name_prefixed;
@@ -168,10 +168,10 @@ function start() {
 		var thumb5 = wd.data.children[4].data.thumbnail;
 		var url5 = wd.data.children[4].data.url;
 		if (url5.includes("https://i.redd.it/") | url5.includes("https://i.imgur.com/") | url5.includes("https://pbs.twimg.com") | url5.includes("media.tumblr.com")) {
-			var url5 = "https://yacfr-img-proxy.herokuapp.com/?url=" + url5.replace(".gifv", ".gif");
+			var url5 =url5.replace(".gifv", ".gif");
 		}
 		if (url5.includes("https://v.redd.it/")) {
-			var url5 = "https://yacfr-img-proxy.herokuapp.com/?url=" + wd.data.children[4].data.secure_media.reddit_video.fallback_url;
+			var url5 =wd.data.children[4].data.secure_media.reddit_video.fallback_url;
 		}
 		var pUrl5 = "https://reddit.com" + wd.data.children[4].data.permalink;
 		document.getElementById("fullPost5").href = pUrl5;
@@ -180,7 +180,7 @@ function start() {
 		if (thumb5 === "self" | thumb5 === "default" | thumb5 === "nsfw" | thumb5 === "image") {
 			document.getElementById("thumb5").src = "img/1.png"
 		} else {
-			document.getElementById("thumb5").src = "https://yacfr-img-proxy.herokuapp.com/?url=" + thumb5;
+			document.getElementById("thumb5").src =thumb5;
 		}
 		document.getElementById("postli5").href = url5;
 		var sub6 = wd.data.children[5].data.subreddit_name_prefixed;
@@ -195,10 +195,10 @@ function start() {
 		var thumb6 = wd.data.children[5].data.thumbnail;
 		var url6 = wd.data.children[5].data.url;
 		if (url6.includes("https://i.redd.it/") | url6.includes("https://i.imgur.com/") | url6.includes("https://pbs.twimg.com") | url6.includes("media.tumblr.com")) {
-			var url6 = "https://yacfr-img-proxy.herokuapp.com/?url=" + url6.replace(".gifv", ".gif");
+			var url6 =url6.replace(".gifv", ".gif");
 		}
 		if (url6.includes("https://v.redd.it/")) {
-			var url6 = "https://yacfr-img-proxy.herokuapp.com/?url=" + wd.data.children[5].data.secure_media.reddit_video.fallback_url;;
+			var url6 =wd.data.children[5].data.secure_media.reddit_video.fallback_url;;
 		}
 		var pUrl6 = "https://reddit.com" + wd.data.children[5].data.permalink;
 		document.getElementById("fullPost6").href = pUrl6;
@@ -207,7 +207,7 @@ function start() {
 		if (thumb6 === "self" | thumb6 === "default" | thumb6 === "nsfw") {
 			document.getElementById("thumb6").src = "img/1.png"
 		} else {
-			document.getElementById("thumb6").src = "https://yacfr-img-proxy.herokuapp.com/?url=" + thumb6;
+			document.getElementById("thumb6").src =thumb6;
 		}
 		document.getElementById("postli6").href = url6;	
 		var sub7 = wd.data.children[6].data.subreddit_name_prefixed;
@@ -222,10 +222,10 @@ function start() {
 		var thumb7 = wd.data.children[6].data.thumbnail;
 		var url7 = wd.data.children[6].data.url;
 		if (url7.includes("https://i.redd.it/") | url7.includes("https://i.imgur.com/") | url7.includes("https://pbs.twimg.com") | url7.includes("media.tumblr.com")) {
-			var url7 = "https://yacfr-img-proxy.herokuapp.com/?url=" + url7.replace(".gifv", ".gif");
+			var url7 =url7.replace(".gifv", ".gif");
 		}
 		if (url7.includes("https://v.redd.it/")) {
-			var url7 = "https://yacfr-img-proxy.herokuapp.com/?url=" + wd.data.children[6].data.secure_media.reddit_video.fallback_url;;
+			var url7 =wd.data.children[6].data.secure_media.reddit_video.fallback_url;;
 		}
 		var pUrl7 = "https://reddit.com" + wd.data.children[6].data.permalink;
 		document.getElementById("fullPost7").href = pUrl7;
@@ -234,7 +234,7 @@ function start() {
 		if (thumb7 === "self" | thumb7 === "default" | thumb7 === "nsfw" | thumb7 === "image") {
 			document.getElementById("thumb7").src = "img/1.png"
 		} else {
-			document.getElementById("thumb7").src = "https://yacfr-img-proxy.herokuapp.com/?url=" + thumb7;
+			document.getElementById("thumb7").src =thumb7;
 		}
 		document.getElementById("postli7").href = url7;
 		var sub8 = wd.data.children[7].data.subreddit_name_prefixed;
@@ -249,10 +249,10 @@ function start() {
 		var thumb8 = wd.data.children[7].data.thumbnail;
 		var url8 = wd.data.children[7].data.url;
 		if (url8.includes("https://i.redd.it/") | url8.includes("https://i.imgur.com/") | url8.includes("https://pbs.twimg.com") | url8.includes("media.tumblr.com")) {
-			var url8 = "https://yacfr-img-proxy.herokuapp.com/?url=" + url8.replace(".gifv", ".gif");
+			var url8 =url8.replace(".gifv", ".gif");
 		}
 		if (url8.includes("https://v.redd.it/")) {
-			var url8 = "https://yacfr-img-proxy.herokuapp.com/?url=" + wd.data.children[7].data.secure_media.reddit_video.fallback_url;;
+			var url8 =wd.data.children[7].data.secure_media.reddit_video.fallback_url;;
 		}
 		var pUrl8 = "https://reddit.com" + wd.data.children[7].data.permalink;
 		document.getElementById("fullPost8").href = pUrl8;
@@ -261,7 +261,7 @@ function start() {
 		if (thumb8 === "self" | thumb8 === "default" | thumb8 === "nsfw" | thumb8 === "image") {
 			document.getElementById("thumb8").src = "img/1.png"
 		} else {
-			document.getElementById("thumb8").src = "https://yacfr-img-proxy.herokuapp.com/?url=" + thumb8;
+			document.getElementById("thumb8").src =thumb8;
 		}
 		document.getElementById("postli8").href = url8;
 		document.getElementById("cProg").style = "width:100%";
