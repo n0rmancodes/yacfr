@@ -7,7 +7,7 @@
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link href="img/favicon.ico" rel="icon" type="image/x-icon" />
 	</head>
-	<body>
+	<body onhashchange="load()">
 		<div class="side">
 			<div class="logoArea">
 				<h1 style="margin:0px;">YACFR</h1>
@@ -58,15 +58,8 @@
 					<button onclick="document.getElementById('shortMenu').style.display = 'none';">Close</button>
 				</div>
 			</div>
-			<div id="viewer" class="overlay" style="display:none;" onclick="document.getElementById('viewer').style.display='none';">
-				<div id="view" class="view overlayContent">
-					<div id="imageViewer"></div>
-					<div id="videoViewer">
-						<video id="player" style="display:none;" controls loop></video>
-					</div>
-					<iframe id="ytPlayer" style="display:none;" frameborder="0" allowfullscreen></iframe>
-					<iframe id="gyPlayer" style="display:none;" frameborder="0" allowfullscreen></iframe>
-				</div>
+			<div id="viewer" class="overlay" style="display:none;">
+				
 			</div>
 		</div>
 		<script src="js/index.js"></script>
